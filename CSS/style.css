@@ -1,0 +1,231 @@
+body {
+
+    font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+    background-image: url('/IMG/Background-deskop.jfif');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50%;
+    color: #fff;
+}
+
+@media (max-width: 390px) {
+    
+    body {
+        background-image: url('/IMG/bg-2.jfif');
+    }
+}
+
+
+
+
+.title{
+
+    
+    position: absolute;
+    font-size: 4.5em;
+    height: 540px;
+    writing-mode: vertical-lr;
+    font-weight: bolder;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+
+.title-2{
+
+    
+    position: absolute;
+    font-size: 4.5em;
+    height: 540px;
+    font-weight: bolder;
+    writing-mode: vertical-lr;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:transparent ;
+    -webkit-text-stroke: 0.2px rgb(255, 255, 255);
+}
+
+
+
+.grup-logo{
+
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    height: 100vh;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+}
+
+.grup-logo i{
+
+    
+    transition: 300ms ease;
+}
+
+.grup-logo a{
+
+    color: #fff;
+}
+
+.grup-logo i:hover{
+
+    transform: translate(-5px,-5px);
+    filter: drop-shadow(5px 5px 0px red);
+}
+
+
+.grup-logo :nth-child(1){
+
+    flex: 0.4;
+}
+.grup-logo :nth-child(2){
+
+    flex: 0.4;
+}
+
+@media (max-width: 414px) {
+    .grup-logo{
+        flex-direction: column;
+        font-size: 2em;
+    }
+}
+
+
+
+.dua{
+
+    display: block;
+    width: 10em;
+    margin: auto;
+    
+    animation: animasi-2 6s cubic-bezier(0.25, 1, 0.5, 1) alternate infinite;
+}
+
+
+
+
+@keyframes animasi-2 {
+
+    0%, 10% {
+
+        
+        transform: translateY(-23vh) rotate(0deg);
+    }
+
+    90%, 100% {
+        transform: translateY(70vh) rotate(30deg);
+    }
+}
+
+
+
+/* overlay */
+
+.overlay{
+
+    width: 0;
+    height: 0;
+    overflow: hidden;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+
+    filter: opacity(0);
+    z-index: 999;
+    transition: 1s;
+
+    transform: translateY(30%);
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.overlay:target{
+
+    width: auto;
+    height: auto;
+    filter: opacity(1);
+    bottom: 0;
+    right: 0;
+    transform: translateY(0%);
+    transition: 1s;
+}
+
+.overlay .card {
+
+    background-image: url('/IMG/Cheess_black.jfif');
+    background-size: cover;
+    background-color: #323442;
+    width: 250px;
+    height: 400px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px;
+
+}
+
+.overlay #close{
+
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+    transform: translate(-50%);
+    color: #a2aaba;
+    transition: 300ms;
+}
+
+.overlay #close:hover{
+
+    color: #fff;
+}
+
+.card img{
+
+    width: 100px;
+    border-radius: 50px;
+    border: solid 1px #fff;
+    margin-bottom: 20px;
+    
+}
+
+.card h1{
+
+    color: #a2aaba;
+    font-weight: bold;
+    font-size: xx-large;
+    flex: 0.2;
+    
+}
+
+.card a {
+
+    font-size: small;
+    color: #a2aaba;
+    flex: 0.7;
+}
+
+.card i {
+    
+    color: #a2aaba;
+    
+
+}
